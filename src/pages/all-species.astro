@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GraphicSpecies from "../components/GraphicSpecies.astro";
+---
+
+<Layout>
+    <h1>All Penguins</h1>
+
+    <nav>
+        <a href="#Adelie">Adelie</a> |
+        <a href="#Gentoo">Gentoo</a> |
+        <a href="#Chinstrap">Chinstrap</a>
+    </nav>
+
+    <div class="slider">
+        <section id="Adelie"><GraphicSpecies species="Adelie" /></section>
+        <section id="Gentoo"><GraphicSpecies species="Gentoo" /></section>
+        <section id="Chinstrap"><GraphicSpecies species="Chinstrap" /></section>
+    </div>
+</Layout>
+
+<style>
+    .slider {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+    .slider section {
+        min-width: 100%;
+        padding: 1rem;
+    }
+</style>
